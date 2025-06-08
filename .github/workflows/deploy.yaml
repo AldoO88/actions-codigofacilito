@@ -6,8 +6,9 @@ jobs:
   first_job:
     runs-on: ubuntu-latest
 
-    env:
-      name: CodigoFacilito
+    outputs:
+      SALIDA: ${{ steps.step_1.outputs.my_variable }}
+
     steps:
       - name: Working dir
         id: step_1
@@ -19,6 +20,9 @@ jobs:
   second_job:
     needs: first_job
     runs-on: ubuntu-latest
+
+    env:
+      SALIDA: ${{ needs.first_job.outputs.SALIDA }}
 
     steps:
       - name: Hola mundo
