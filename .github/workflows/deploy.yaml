@@ -10,7 +10,7 @@ jobs:
       name: CodigoFacilito
     steps:
       - name: Hola mundo
-        run: echo "Hola mundo $CodeFacilito"
+        run: echo "Hola mundo $name"
 
   second_job:
     needs: first_job
