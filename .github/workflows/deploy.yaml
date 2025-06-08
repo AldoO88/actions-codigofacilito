@@ -8,7 +8,7 @@ jobs:
 
     steps:
       - name: Hola mundo
-        run: "Hola mundo"
+        run: echo "Hola mundo"
 
   second_job:
     if: false
