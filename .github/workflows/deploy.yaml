@@ -9,8 +9,15 @@ jobs:
     env:
       name: CodigoFacilito
     steps:
-      - name: Hola mundo
-        run: echo "Hola mundo $name"
+      - name: Working dir
+        run: la -al
+
+      - name: Action
+        uses: actions/checkout@v4
+
+      - name: Working dir after action
+        run: la -al
+
 
   second_job:
     needs: first_job
