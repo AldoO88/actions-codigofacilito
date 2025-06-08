@@ -10,13 +10,13 @@ jobs:
       name: CodigoFacilito
     steps:
       - name: Working dir
-        run: la -al
+        run: ls -al
 
       - name: Action
         uses: actions/checkout@v4
 
       - name: Working dir after action
-        run: la -al
+        run: ls -al
 
 
   second_job:
